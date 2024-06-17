@@ -1,11 +1,13 @@
 alert('Boas vindas ao jogo do número secreto');
-let numeroSecreto = 9;
+let numeroSecreto = prompt('Escolha um número para o jogador adivinhar');
+let numeroLimite = prompt('Escolha um número de inicio');
+let numeroMaximo = prompt('Escolha um número de fim');
 console.log(numeroSecreto);
 let chute;
 let tentativas = 1;
 // Enquanto o chute não for igual ao n.s.
 while(chute != numeroSecreto){
-    chute = prompt('Escolha um número entre 1 a 10');
+    chute = parseInt(prompt(`Escolha um número entre ${numeroLimite} a ${numeroMaximo}`));
     // se chute for igual ao número secreto
     if (chute == numeroSecreto) {
         break;
